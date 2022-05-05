@@ -15,10 +15,12 @@ const Appheader = () => {
     <>
       <div className="app__header_mobileview">
         <CameraAltOutlinedIcon />
-        <img
-          src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
-          alt="instagram logo"
-        />
+        <Link to="/">
+          <img
+            src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+            alt="instagram logo"
+          />
+        </Link>
         <MapsUgcOutlinedIcon />
       </div>
       <div className="app__footer_mobileview">
