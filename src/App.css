@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Roboto:wght@100;300;400&display=swap");
+* {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  background-color: #fafafa;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__headerImage,
+.app__header_mobileview {
+  padding: 10px;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+  object-fit: contain;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+}
+
+.app__headerInput {
+  width: 15rem;
+  display: flex;
+  align-items: flex-end;
+  background: #f3f0f0;
+  padding-left: 11px;
+  border-radius: 5px;
+}
+
+.app__searchinput {
+  padding: 10px;
+  border: none;
+  background: inherit;
+  outline: none;
+}
+
+.app__headerLinks {
+  width: 20rem;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
+}
+
+.app__headerLinks a {
+  text-decoration: none;
+  color: black;
+}
+
+.app__posts {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.app__posts_right__header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.post__avatar {
+  margin-right: 10px;
+}
+
+.app__footer_mobileview,
+.app__header_mobileview {
+  display: none;
+}
+
+/* Media queries */
+@media screen and (max-width: 580px) {
+  .app__headerImage,
+  .app__headerLinks,
+  .app__headerInput,
+  .app__posts_right {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .app__posts {
+    padding: unset;
+  }
+
+  .app__header_mobileview,
+  .app__footer_mobileview {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .app__footer_mobileview {
+    position: fixed;
+    bottom: 0%;
+    width: 95%;
+    background-color: white;
+    border: 1px solid lightgray;
+    padding: 10px;
+    align-items: center;
+  }
+
+  .app__footer_mobileview .post__avatar {
+    width: 27px;
+    height: 27px;
   }
 }
