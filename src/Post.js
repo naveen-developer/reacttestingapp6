@@ -6,17 +6,21 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import ModeCommentOutlinedIcon from "@mui/icons-material/ModeCommentOutlined";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import { Link } from "react-router-dom";
 
 const Post = ({ values, userdata }) => {
   // console.log(userpic);
   const [comment, setComment] = useState("");
   const [heartIcon, setHeartIcon] = useState(false);
+  const [heartIcon1, setHeartIcon1] = useState(false);
 
   const showHeart = () => {
     console.log("clicked");
     setHeartIcon(true);
     setTimeout(() => {
       setHeartIcon(false);
+      setHeartIcon1(true);
     }, 800);
   };
 
@@ -28,12 +32,14 @@ const Post = ({ values, userdata }) => {
     <div className="post">
       <div className="post__header">
         <div className="post__header_icon">
-          <Avatar
-            className="post__avatar"
-            alt="Remy Sharp"
-            src={userdata.picture}
-          />
-          <h3>{userdata.username}</h3>
+          <Link to="/profile">
+            <Avatar
+              className="post__avatar"
+              alt="Remy Sharp"
+              src={userdata.picture}
+            />
+            <h3>{userdata.username}</h3>
+          </Link>
         </div>
         <div className="Mobile_view_threedots_icon">
           <MoreHorizOutlinedIcon />
@@ -67,7 +73,15 @@ const Post = ({ values, userdata }) => {
       </div>
       <div className="post__mobileview_div">
         <div>
-          <FavoriteBorderOutlinedIcon />
+          {heartIcon1 ? (
+            <FavoriteIcon
+              sx={{ color: "red", fontSize: 25 }}
+              onClick={() => setHeartIcon1(false)}
+            />
+          ) : (
+            <FavoriteBorderOutlinedIcon />
+          )}
+
           <ModeCommentOutlinedIcon />
           <SendOutlinedIcon />
         </div>

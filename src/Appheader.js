@@ -28,17 +28,21 @@ const Appheader = () => {
         <CameraAltOutlinedIcon />
         <AddBoxOutlinedIcon />
         <FavoriteBorderOutlinedIcon />
-        <Avatar
-          className="post__avatar"
-          alt="Remy Sharp"
-          src={data[0].picture}
-        />
+        <Link to="/profile">
+          <Avatar
+            className="post__avatar"
+            alt="Remy Sharp"
+            src={data[0].picture}
+          />
+        </Link>
       </div>
       <div className="app__headerImage">
-        <img
-          src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
-          alt="instagram logo"
-        />
+        <Link to="/">
+          <img
+            src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+            alt="instagram logo"
+          />
+        </Link>
         <div className="app__headerInput">
           <span>
             <SearchIcon />
