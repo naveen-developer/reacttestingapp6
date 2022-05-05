@@ -12,7 +12,7 @@ import Nomatch from "./Nomatch";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     <Appheader />
     <Routes>
       <Route path="/" element={<App />} />
@@ -26,5 +26,5 @@ root.render(
 
       <Route path="*" element={<Nomatch />} />
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );
