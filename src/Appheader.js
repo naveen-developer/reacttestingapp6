@@ -52,6 +52,7 @@ const Appheader = () => {
           />
         </div>
         <div className="app__headerLinks">
+          <Link to="/">Home</Link>
           <Link to="/signin">Signin</Link>
           <Link to="/signup">Signup</Link>
           <Link to="/profile">My Profile</Link>
