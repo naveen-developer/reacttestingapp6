@@ -1,0 +1,121 @@
+.post {
+  background-color: white;
+  max-width: 500px;
+  border: 1px solid lightgray;
+  margin-bottom: 45px;
+}
+.post__image {
+  width: 100%;
+  object-fit: contain;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.post__text {
+  padding: 5px 10px;
+}
+
+.post__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.post__header_icon {
+  display: flex;
+  align-items: center;
+}
+
+.post__header_icon .MuiAvatar-root {
+  width: 30px;
+  height: 30px;
+}
+
+.post__avatar {
+  margin-right: 10px;
+}
+
+.post__commentBox {
+  display: flex;
+  margin-top: 10px;
+}
+
+.post__input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-top: 1px solid lightgray;
+}
+
+.post__button {
+  flex: 0;
+  border: none;
+  color: #6082a3;
+  background-color: transparent;
+  border-top: 1px solid lightgray;
+}
+
+.Mobile_view_threedots_icon {
+  cursor: pointer;
+}
+
+.post__mobileview_div {
+  display: none;
+}
+
+.post__text1,
+.post__text2 {
+  margin: 5px 10px;
+}
+
+.post__text2 {
+  color: #767373;
+  font-weight: 500;
+}
+
+.post__image_div {
+  position: relative;
+}
+
+.post__image_hearIcon {
+  text-align: center;
+  animation: heartgrow 0.8s linear;
+  -webkit-animation: heartgrow 0.8s linear;
+}
+
+@keyframes heartgrow {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Media queries */
+@media screen and (max-width: 580px) {
+  .post__commentBox {
+    display: none;
+  }
+
+  .post {
+    max-width: none;
+    border: none;
+    margin-bottom: 15px;
+  }
+
+  .post__header {
+    padding: 10px 10px;
+  }
+
+  .post__header_icon {
+    font-size: 13px !important;
+  }
+
+  .post__mobileview_div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .post__mobileview_div svg {
+    margin: 10px 4px;
+  }
+}

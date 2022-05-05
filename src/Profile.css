@@ -1,0 +1,96 @@
+.Profile__header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.Profile__left {
+  margin: 0 50px;
+}
+
+.profile__right {
+  width: 40%;
+  margin-top: 20px;
+}
+
+.profile__right h1 {
+  font-weight: 400;
+}
+
+.profile__text {
+  width: 50%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+hr {
+  width: 60%;
+  margin: 20px auto;
+}
+
+.profile__postsmain {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.profile__profilepost {
+  width: 15rem;
+  height: 18rem;
+  margin: 10px;
+}
+
+.profile__postsmain_mobileview {
+  display: none;
+}
+
+/* Media queries */
+@media screen and (max-width: 580px) {
+  .Profile__left .MuiAvatar-root {
+    width: 75px;
+    height: 75px;
+  }
+
+  .Profile__header {
+    justify-content: flex-start;
+  }
+
+  .Profile__left {
+    margin: unset;
+    padding-top: 20px;
+  }
+
+  .profile__right {
+    margin-left: 10px;
+    width: 100%;
+  }
+
+  .profile__right h1 {
+    font-size: 25px;
+  }
+
+  .profile__text {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .profile__postsmain {
+    display: none;
+  }
+
+  .profile__postsmain_mobileview {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+  }
+
+  .profile__profilepost_mobileview {
+    width: 7rem;
+    height: 8.6rem;
+    margin: 4px;
+    background-color: lightgreen;
+  }
+}
